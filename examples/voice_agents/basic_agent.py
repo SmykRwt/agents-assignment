@@ -45,9 +45,10 @@ async def entrypoint(ctx: JobContext):
         tts="cartesia/sonic-2",
         turn_detection=MultilingualModel(),
         vad=ctx.proc.userdata["vad"],
-        preemptive_generation=False,
+        preemptive_generation=True,
         allow_interruptions=True,
         resume_false_interruption=True,
+        
     )
 
     state = {
